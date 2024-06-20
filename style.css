@@ -92,6 +92,10 @@ img {
     border: 2px solid rgba(255, 255, 255, 0.39);
 }
 
+#section-4 img {
+    border: 2px solid var(--moderateViolet);
+}
+
 strong {
     font-size: 17px;
     font-weight: 600;
