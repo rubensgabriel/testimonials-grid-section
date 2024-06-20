@@ -43,6 +43,10 @@ section:hover {
     grid-area: section-1;
     background-color: var(--moderateViolet);
     color: var(--white);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 0%;
+    background-size: 140px;
 }
 
 #section-2 {
