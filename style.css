@@ -1,0 +1,156 @@
+:root {
+/*Primary*/
+
+--moderateViolet: hsl(263, 55%, 52%);
+--veryDarkGrayishBlue: hsl(217, 19%, 35%);
+--veryDarkBlackishBlue: hsl(219, 29%, 14%);
+--white: hsl(0, 0%, 100%);
+
+/*Neutral*/
+
+--lightGray: hsl(0, 0%, 81%);
+--lightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+body {
+    background-color: var(--lightGrayishBlue);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+    "section-1 section-1 section-2 section-5"
+    "section-3 section-4 section-4 section-5";
+    gap: 30px;
+    margin: 25px;
+}
+
+section {
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 30px 40px 20px;
+    box-shadow: 5px 8px 11px rgba(0, 0, 0, 0.13);
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+}
+
+section:hover {
+    transform: scale(1.04);
+}
+
+#section-1 {
+    grid-area: section-1;
+    background-color: var(--moderateViolet);
+    color: var(--white);
+}
+
+#section-2 {
+    grid-area: section-2;
+    background-color: var(--veryDarkGrayishBlue);
+    color: var(--white);
+    max-width: 320px;
+}
+
+#section-3 {
+    grid-area: section-3;
+    background-color: var(--white);
+    max-width: 320px;
+}
+
+#section-4 {
+    grid-area: section-4;
+    background-color: var(--veryDarkBlackishBlue);
+    color: var(--white);
+}
+
+#section-5 {
+    grid-area: section-5;
+    background-color: var(--white);
+    max-width: 320px;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    border-radius: 50%;
+    width: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.39);
+}
+
+strong {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+span {
+    color: var(--lightGray);
+}
+
+h1 {
+    color:var(--white);
+    font-weight: 600;
+    font-size: 1.6em;
+}
+
+#section-3 h1,
+#section-5 h1 {
+    color: var(--veryDarkGrayishBlue);
+}
+
+p {
+    color: var(--lightGray);
+    font-size: 17px;
+    line-height: 21px;
+}
+
+#section-3 p, #section-3 strong,
+#section-5 p, #section-5 strong  {
+    color: var(--veryDarkGrayishBlue);
+}
+
+footer {
+    text-align: center;
+    font-size: 13px;
+}
+
+@media (max-width: 1250px) {
+    main {
+        grid-template-columns: 1.1fr 1fr;
+        grid-template-areas:
+        "section-1 section-4"
+        "section-3 section-5"
+        "section-2 section-5";
+    }
+
+    #section-2,
+    #section-3,
+    #section-5 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
